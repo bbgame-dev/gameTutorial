@@ -35,5 +35,7 @@ export default class HelloWorldScene extends Phaser.Scene
         logo.setCollideWorldBounds(true)
 
         emitter.startFollow(logo)
+
+        this.input.on('pointerdown' , ()=> this.scene.start('game-scene'))
     }
 }
